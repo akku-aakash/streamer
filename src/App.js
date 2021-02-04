@@ -7,7 +7,7 @@ const App = () => {
       <h2>Hello world</h2>
 
       <video id='videoPlayer' controls autoPlay>
-      <source src="http://localhost:5000/video" type="video/mp4"/>
+      <source src="https://videostreama.herokuapp.com/video"  type="video/mp4"/>
       </video>
     </div>
   );

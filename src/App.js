@@ -13,7 +13,7 @@ const App = () => {
         <Switch>
           <Route path='/' exact component={Home} />
           <Route path='/upload' exact component={Upload} />
-          <Route path='/viewvideo/:vId' exact render={props => <Viewvid {...props} />} />
+          <Route path='/viewvideo/public/video/:vId' exact render={props => <Viewvid {...props} />} />
         </Switch>
       </BrowserRouter>
     </div>

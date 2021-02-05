@@ -27,6 +27,7 @@ const Home = () => {
                     </div>
                 ))
             }
+            <div><Link to='/upload'>Upload a video</Link></div>
         </div>
     );
 };

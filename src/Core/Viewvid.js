@@ -5,7 +5,7 @@ const Viewvid = () => {
         <div>
             <h2>Hello world</h2>
             <video id='videoPlayer' controls autoPlay>
-                <source src="https://videostreama.herokuapp.com/video" type="video/mp4" />
+                <source src={`${process.env.REACT_APP_API_URL}/video`} type="video/mp4" />
             </video>
         </div>
     );

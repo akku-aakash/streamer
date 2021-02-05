@@ -22,19 +22,22 @@ const Upload = () => {
         switch (name) {
             case 'thumbnail':
                 const phooto = e.target.files;
-                formData.append('image', phooto)
+                formData.append('image', phooto[0])
                 setvalues({ ...values, ImageURL: URL.createObjectURL(e.target.files[0]) })
+                console.log(phooto[0])
+                console.log(phooto)
                 break;
             case 'video':
                 const videoo = e.target.files;
-                formData.append('video', videoo)
+                formData.append('video', videoo[0])
+                console.log(videoo[0])
+                console.log(videoo)
                 break;
             default:
                 setvalues({ ...values, [name]: e.target.value })
                 formData.set(name, e.target.value);
                 break;
         }
-        console.log(formData)
     }
 
     const handleSubmit = e => {

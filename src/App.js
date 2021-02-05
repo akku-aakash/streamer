@@ -1,14 +1,21 @@
 import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import Home from './Core/Home';
+import Upload from './Core/Upload';
+import Viewvid from './Core/Viewvid';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
 
   return (
     <div>
-      <h2>Hello world</h2>
-
-      <video id='videoPlayer' controls autoPlay>
-      <source src="https://videostreama.herokuapp.com/video"  type="video/mp4"/>
-      </video>
+      <BrowserRouter>
+        <Switch>
+          <Route path='/' exact component={Home} />
+          <Route path='/upload' exact component={Upload} />
+          <Route path='/viewvideo/:vId' exact render={props => <Viewvid {...props} />} />
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 };

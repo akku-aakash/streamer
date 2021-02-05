@@ -21,8 +21,8 @@ const Home = () => {
             {
                 videos && videos.map((res) => (
                     <div>
-                        <img src={`${process.env.REACT_APP_API_URL}/image?id=${res.thumbnail}`} alt={res.title} />
-                        <Link to={`/viewvideo/${res.video}`}><p>{res.title}</p></Link>
+                        <Link to={`/viewvideo/${res.video}`}><img src={`${process.env.REACT_APP_API_URL}/image?id=${res.thumbnail}`} alt={res.title} />
+                            <p>{res.title}</p></Link>
                         <p>{res.description}</p>
                     </div>
                 ))
